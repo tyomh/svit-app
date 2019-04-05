@@ -21,6 +21,7 @@ public class ExceptionHandlingDemo {
             throw new Exception(); /* Line 7 */
         } catch (Exception e) {
             System.out.println("exception@aMethod ");
+            System.exit(0);
         } finally /* Line 9 */
         {
             System.out.println("finally "); /* Line 11 */

@@ -25,10 +25,8 @@ public class PowSolution {
 	}
 
     
-	public static void main(String args[]) 
-	{ 
+	public static void main(String args[]) { 
 		PowSolution s = new PowSolution(); 
-		System.out.println(s.pow(3,3));
-		
+		System.out.println(s.pow(3,3));		
 	} 
 }
