@@ -8,14 +8,17 @@ package com.svit.java.l2;
  * @author Brian
  *
  */
+import java.util.*;
 public class HelloSVIT {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println("HELLO SVIT!");
-
-	}
+		Set<Integer> set = new HashSet<>();
+		set.add(null);
+		for (int a : set)
+			System.out.println(a);
+	}  		
 
 }

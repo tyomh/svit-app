@@ -14,7 +14,7 @@ public class FailSafeDemo {
 		ConcurrentHashMap<String,String> map = new ConcurrentHashMap<String,String>();
         map.put("A", "1");
         map.put("B", "2");
-        map.put("C","3");
+        map.put("C", "3");
         
         Iterator iterator = map.keySet().iterator();
         
