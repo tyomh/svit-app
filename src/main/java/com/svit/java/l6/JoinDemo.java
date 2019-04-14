@@ -1,6 +1,10 @@
 package com.svit.java.l6;
 
+import java.util.Date;
 /**
+ * 
+ * Code is for study and personal use purpose, not for commercial use.
+ * 
  * The join() method of a Thread instance can be used to "join" the start of a thread's execution to the end of another thread's 
  * execution so that a thread will not start running until another thread has ended. If join() is called on a Thread instance, 
  * the currently running thread will block until the Thread instance has finished executing.
@@ -9,12 +13,11 @@ package com.svit.java.l6;
  * RunnableJob object. It calls start() and then join() on each thread, in order. This blocks the execution of the 
  * current (main) thread from proceeding until the thread has completed. This means that the main thread will block for 1 second 
  * at each join(), since the RunnableJob sleeps for 1 second. Following this, ThreadExample creates 4 more threads, 
- * "T5", "T6", "T7", and "T8". This time, no joins are called on these threads, so the main thread will not block.
- * @author bzhou
- * @since 2013-03-09
+ * "T5", "T6", "T7", and "T8". This time, no joins are called on these threads, so the main thread will not block. * 
+ * 
+ * @author sv-it.org
+ *
  */
-import java.util.Date;
-
 class RunnableJob implements Runnable {
 
     public void run() {

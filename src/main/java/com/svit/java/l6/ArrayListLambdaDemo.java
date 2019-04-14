@@ -2,10 +2,11 @@ package com.svit.java.l6;
 
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  * 
- * @author brian
+ * Code is for study and personal use purpose, not for commercial use.
+ * 
+ * @author sv-it.org
  *
  */
 public class ArrayListLambdaDemo {

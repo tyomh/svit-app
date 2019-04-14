@@ -8,7 +8,7 @@ package com.svit.java.l6;
  * class loading, this is the easiest method to create a singleton class but it has 
  * a drawback that instance is created even though client application might not be using it.
  * 
- * @author sv-it
+ * @author sv-it.org
  */
 public class SingletonEagerDemo {
 	  // public instance initialized when loading the class 
