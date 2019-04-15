@@ -32,6 +32,7 @@ public class SingletonEagerDemo {
 
         System.out.println("Singleton object obtained 3rd time!"
                 + getSingletonObject());
+        
 
     }
 }

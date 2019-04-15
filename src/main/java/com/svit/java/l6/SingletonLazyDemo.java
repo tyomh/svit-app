@@ -48,7 +48,9 @@ class Singleton {
         }
         return singletonObject;
     }
-
+    // why double lock
+    // 高度并发
+    
     // Step 4: Override the Object clone method to prevent cloning
     @Override
     public Object clone() throws CloneNotSupportedException {
