@@ -1,5 +1,12 @@
 package com.svit.java.l6;
 
+/**
+ * 
+ * Code is for study and personal use purpose, not for commercial use.
+ * 
+ * @author sv-it.org
+ *
+ */
 interface InterfaceOne {
 	// abstract method
 	public void square(int a);

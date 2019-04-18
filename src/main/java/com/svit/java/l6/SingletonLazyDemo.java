@@ -10,7 +10,7 @@ package com.svit.java.l6;
  * maintain a single connection object which can be used throughout the
  * application.
  * 
- * @author sv-it
+ * @author sv-it.org
  */
 
 //class Singleton1 { 

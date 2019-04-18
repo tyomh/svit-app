@@ -2,7 +2,13 @@ package com.svit.java.l6;
 
 import java.util.*;
 import java.util.stream.*;
-
+/**
+ * 
+ * Code is for study and personal use purpose, not for commercial use.
+ * 
+ * @author sv-it.org
+ *
+ */
 public class StreamDemo {
 
 	public static void main(String[] args) {
@@ -28,12 +34,13 @@ public class StreamDemo {
 		number.stream().map(x -> x * x).forEach(y -> System.out.println(y + 100));
 
 		// reduce
-		int even = number.stream().filter(x -> x % 2 == 0).reduce(0, (ans, i) -> ans + i);
+		int even = number.stream().filter(x -> x % 2 == 1).reduce(0, (ans, i) -> ans + i);
 
 		System.out.println(even);
 
 	}
 
+	
 }
 
 

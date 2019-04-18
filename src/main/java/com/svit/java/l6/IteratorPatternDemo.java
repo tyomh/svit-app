@@ -1,16 +1,14 @@
 package com.svit.java.l6;
-
-
-/**
- * 
- * @author sv-it
- *
- */
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
+/**
+ * 
+ * Code is for study and personal use purpose, not for commercial use.
+ * 
+ * @author sv-it.org
+ *
+ */
 public class IteratorPatternDemo {
 	public static void main(String[] args) {
         List<Shape> list = new ArrayList<Shape>();

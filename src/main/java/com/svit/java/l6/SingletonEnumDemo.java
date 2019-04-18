@@ -4,7 +4,7 @@ package com.svit.java.l6;
  * Singleton: a class can be instantiated only once in JVM per class loader.
  * Repeated calls always return the same instance.
  * 
- * @author sv-it
+ * @author sv-it.org
  */
 enum EnumSingleton {
 
