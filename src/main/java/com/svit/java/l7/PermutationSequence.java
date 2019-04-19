@@ -1,6 +1,6 @@
 package com.svit.java.l7;
 
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * Write a program to generate ALL unique permutations of those characters. 
@@ -18,7 +18,8 @@ import java.util.ArrayList;
  */
 public class PermutationSequence{
     public static void main(String[] args){
-        System.out.println(permutations("aba"));
+       // System.out.println(permutations("aba"));
+    	System.out.println(permutationsIterative("aba"));
     }
 
     public static ArrayList<String> permutations(String input){
@@ -45,12 +46,25 @@ public class PermutationSequence{
     
     
     //iterative solution - to do
-    public static ArrayList<String> permutationsIterative(String input){
-        ArrayList<String> result = new ArrayList<String>();
+    public static LinkedList<String> permutationsIterative(String input){
         
-        //helper(input, "", result);
+        LinkedList<String> res = new LinkedList<>();
+        res.add("");
+        for (int i = 0; i < input.length(); i++) {
+            Set<String> cache = new HashSet<>();
+            while (res.peekFirst().length() == i) {
+                String l = res.removeFirst();
+                for (int j = 0; j <= l.length(); j++) {
+                	String x = l.substring(0, j) + input.charAt(i) + l.substring(j);
+                    if (cache.add(x)) {
+                    	res.add(x);
+                    }	
+                }
+           
+            }
+        }
+        return res;
         
-        return result;
     }    
     
 }

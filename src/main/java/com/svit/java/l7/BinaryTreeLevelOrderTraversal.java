@@ -37,6 +37,9 @@ public class BinaryTreeLevelOrderTraversal{
         node4.left = node7;
         
         System.out.println(levelOrder(node1));
+        System.out.println(eachLevelOrder(node1));
+        System.out.println(BottomUpLevelOrder(node1));
+        System.out.println(ZigzagLevelOrder(node1));
     }   
 	
     /**
@@ -119,11 +122,44 @@ public class BinaryTreeLevelOrderTraversal{
 	 * @param root
 	 * @return
 	 */
-//    public static List<List<Integer>> BottomUpLevelOrder(TreeNode root) {
-//    	// to be finished
-//    	
-//
-//    }
+    public static List<List<Integer>> BottomUpLevelOrder(TreeNode root) {
+    	// to be finished
+    	LinkedList<List<Integer>> res = new LinkedList<>();
+    	if (root == null) {
+    		return res;
+    	}
+    	
+    	Queue<TreeNode> queue = new LinkedList<>();
+    	List<Integer> curList = new LinkedList<>();
+    	queue.add(root);
+    	int curNode = 1;
+    	int nextNode = 0;
+    	
+    	while (!queue.isEmpty()) {
+    		TreeNode cur = queue.poll();
+    		curNode--;
+    		curList.add(cur.val);
+    		if (cur.left != null) {
+    			queue.add(cur.left);
+    			nextNode++;
+    		}
+    		
+    		if (cur.right != null) {
+    			queue.add(cur.right);
+    			nextNode++;
+    		}
+    		
+    		if (curNode == 0) {
+    			curNode = nextNode;
+    			nextNode = 0;
+    			res.addFirst(new LinkedList<>(curList));
+    			curList.clear();
+    		}
+    	}
+    	
+    	return res;
+
+    }
     
     
     
@@ -132,9 +168,48 @@ public class BinaryTreeLevelOrderTraversal{
 	 * @param root
 	 * @return
 	 */
-//    public static List<List<Integer>> ZigzagLevelOrder(TreeNode root) {
-//    	// to be finished
-//    	
-//
-//    }
+    public static List<List<Integer>> ZigzagLevelOrder(TreeNode root) {
+    	// to be finished
+    	if (root == null)
+    		return null;
+    	
+    	List<List<Integer>> res = new LinkedList<>();
+    	
+    	Queue<TreeNode> queue = new LinkedList<>();
+    	LinkedList<Integer> curList = new LinkedList<>();
+    	queue.add(root);
+    	boolean leftToRight = true;
+    	int curLevel = 1;
+    	int nextLevel = 0;
+
+    	while (!queue.isEmpty()) {
+    		TreeNode cur = queue.poll();
+    		curLevel--;
+    		if (leftToRight) {
+    			curList.add(cur.val);
+    		} else {
+    			curList.addFirst(cur.val);
+    		}
+    		if (cur.left != null) {
+    			queue.add(cur.left);
+    			nextLevel++;
+    		}
+    		
+    		if (cur.right != null) {
+    			queue.add(cur.right);
+    			nextLevel++;
+    		}
+    		
+    		if (curLevel == 0) {
+    			curLevel = nextLevel;
+    			nextLevel = 0;
+    			res.add(new LinkedList<>(curList));
+    			curList.clear();
+    			leftToRight = leftToRight ? false : true;
+    		}
+    	}
+    	
+    	return res;
+    }
+    
 }

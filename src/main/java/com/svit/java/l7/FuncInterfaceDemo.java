@@ -21,7 +21,7 @@ public class FuncInterfaceDemo {
 
 	public static void main(String[] args) {
 		// implement a user defined functional interface.
-		FuncInterface fobj = (int x) -> System.out.println(2 * x);
+		FuncInterface fobj = x -> System.out.println(2 * x);
 
 		// call above lambda expression
 		fobj.abstractFun(5);

@@ -1,6 +1,7 @@
 package com.svit.java.l7;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -20,8 +21,14 @@ public class AllSubsets{
         
         List<List<Integer>> result = new ArrayList<List<Integer>>();
                 
-        genAllSubsets(input, result);
+//        genAllSubsets(input, result);
+//        
+//        System.out.println(result);
         
+//        recursive(result, new ArrayList<Integer>(), input, 0);
+//        System.out.println(result);
+        
+        iterative(result, input);
         System.out.println(result);
     }
     
@@ -63,13 +70,34 @@ public class AllSubsets{
         return result;
     }
     
-    
     // recursive way
     
-    
+    public static void recursive(List<List<Integer>> res, List<Integer> temp, List<Integer> input, int start) {
+    	res.add(new ArrayList<>(temp));
+    	for (int i = start; i < input.size(); i++) {
+    		temp.add(input.get(i));
+    		recursive(res, temp, input, i + 1);
+    		temp.remove(temp.size() - 1);
+    	}
+    }
     
     //iterative way
+    //Each '1' in the binary representation indicate an element in that position.
     
-    
+    public static void iterative(List<List<Integer>> res, List<Integer> input) {
+    	int m = input.size();
+    	
+    	for (int i = 0; i < (1 << m); i++) {
+    		List<Integer> temp = new LinkedList<>();
+    		int bitSet = 1;
+    		for (int j = 0; j < m; j++) {
+    			if ((i & bitSet) > 0) {				
+    				temp.add(input.get(j));
+    			}
+    			bitSet = bitSet << 1;
+    		}
+    		res.add(new ArrayList<>(temp));
+    	}
+    }
     
 }
