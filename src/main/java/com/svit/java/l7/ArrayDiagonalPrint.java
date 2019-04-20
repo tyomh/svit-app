@@ -30,6 +30,8 @@ public class ArrayDiagonalPrint {
         		System.out.println(i + ",");
         }
     }
+    
+    
     public static void print(int[][] matrix){
     		// to do
         
