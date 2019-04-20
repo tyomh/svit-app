@@ -1,0 +1,5 @@
+-------- Java ----- Do your best to think and work on following
+1). read tomcat - https://tomcat.apache.org/connectors-doc-archive/jk2/jk/quickhowto.html
+2). read JPA/Hibernate - http://hibernate.org/orm/documentation/getting-started/
+3). Java Interview Questions
+4). Database Interview Questions

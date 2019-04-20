@@ -1,4 +1,4 @@
-package com.svit.java.l7;
+package com.svit.java.l8;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

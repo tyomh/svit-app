@@ -33,6 +33,7 @@ public class ArrayDiagonalPrint {
         up(matrix);
         down(matrix);
     }
+<<<<<<< HEAD
     public static void down(int[][] matrix){
     	if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
     		return;
@@ -43,6 +44,12 @@ public class ArrayDiagonalPrint {
     	int[] dirs = {1, -1};
     	int[] res = new int[m * n];
     	int row = 0, col = 0;
+=======
+    
+    
+    public static void print(int[][] matrix){
+    		// to do
+>>>>>>> 9997d76dbb4cdeb0ff941579ac4769a8a0bd03f2
         
     	for (int i = 0; i < m * n; i++) {
     		res[i] = matrix[row][col];
